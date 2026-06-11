@@ -1,0 +1,119 @@
+/* ============================================
+   CONTROLE DE GASTOS — CSS CUSTOMIZADO
+   ============================================ */
+
+/* Fonte do Google */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f0f2f5;
+  color: #1a1a2e;
+}
+
+/* NAVBAR */
+.navbar {
+  background: linear-gradient(135deg, #523903 0%, #16213e 100%);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.2);
+}
+
+/* CARDS DE RESUMO */
+.card-resumo {
+  border: none;
+  border-radius: 14px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.07);
+  transition: transform 0.2s ease;
+}
+.card-resumo:hover {
+  transform: translateY(-3px);
+}
+.card-receita  { border-left: 5px solid #28a745; }
+.card-despesa  { border-left: 5px solid #dc3545; }
+.card-saldo-pos { border-left: 5px solid #0d6efd; }
+.card-saldo-neg { border-left: 5px solid #dc3545; }
+
+.label-card {
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #6c757d;
+}
+.valor-card {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.icone-card {
+  font-size: 2.2rem;
+  opacity: 0.25;
+}
+
+/* CARDS GENÉRICOS */
+.card {
+  border: none;
+  border-radius: 14px;
+}
+.card-header {
+  background-color: #1e1c31;
+  border-bottom: 1px solid #e9ecef;
+  border-radius: 14px 14px 0 0 !important;
+  font-size: 0.92rem;
+  padding: 14px 18px;
+}
+
+/* TABELA */
+.table th {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #6c757d;
+  font-weight: 600;
+}
+.table td {
+  vertical-align: middle;
+  font-size: 0.88rem;
+}
+.table-hover tbody tr:hover {
+  background-color: #f8f9ff;
+}
+
+/* BADGES SUAVES */
+.bg-success-subtle { background-color: #d1fae5 !important; }
+.bg-danger-subtle  { background-color: #fee2e2 !important; }
+.bg-secondary-subtle { background-color: #f1f3f5 !important; }
+
+/* BARRA DE PROGRESSO */
+.progress {
+  background-color: #f0f2f5;
+  border-radius: 99px;
+}
+
+/* BOTÃO PRINCIPAL */
+.btn-primary {
+  background: linear-gradient(135deg, #0d6efd, #0a58ca);
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 0.9rem;
+  letter-spacing: 0.03em;
+}
+.btn-primary:hover {
+  background: linear-gradient(135deg, #0a58ca, #084298);
+}
+
+/* FORMULÁRIO */
+.form-control, .form-select {
+  border-radius: 8px;
+  border: 1px solid #dee2e6;
+  font-size: 0.88rem;
+}
+.form-control:focus, .form-select:focus {
+  border-color: #0d6efd;
+  box-shadow: 0 0 0 0.2rem rgba(13,110,253,0.12);
+}
+
+/* FOOTER */
+footer {
+  color: #adb5bd;
+  font-size: 0.78rem;
+}
