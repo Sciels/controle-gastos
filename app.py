@@ -14,18 +14,21 @@ ARQUIVO_CSV = "lancamentos.csv"
 CABECALHO = ["data", "tipo", "categoria", "descricao", "valor"]
 
 def inicializar_arquivo():
+    # Se o arquivo não existe, cria com cabeçalho
     if not os.path.exists(ARQUIVO_CSV):
         with open(ARQUIVO_CSV, mode="w", newline="", encoding="utf-8") as f:
             writer = csv.writer(f)
             writer.writerow(CABECALHO)
+        return
 
-def ler_lancamentos():
-    lancamentos = []
+    # Se existe mas está vazio ou sem cabeçalho, reescreve o cabeçalho
     with open(ARQUIVO_CSV, mode="r", encoding="utf-8") as f:
-        reader = csv.DictReader(f)
-        for row in reader:
-            if row:
-                lancamentos.append(row)
+        conteudo = f.read().strip()
+    
+    if not conteudo or conteudo.split("\n")[0] != ",".join(CABECALHO):
+        with open(ARQUIVO_CSV, mode="w", newline="", encoding="utf-8") as f:
+            writer = csv.writer(f)
+            writer.writerow(CABECALHO)
     return lancamentos
 
 #Mini Dashboard com categorias e calculos de gasto 
